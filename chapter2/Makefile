@@ -7,7 +7,10 @@
 
 CC=cc
 
-all: htoi squeeze
+all: any htoi squeeze
+
+any: any.c Makefile
+	$(CC) -ggdb3 -O0 -std=c99 -Wall -Werror -o any.out any.c
 
 htoi: htoi.c Makefile
 	$(CC) -ggdb3 -O0 -std=c99 -Wall -Werror -o htoi.out htoi.c
